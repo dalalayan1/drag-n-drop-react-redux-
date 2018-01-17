@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
-import TodoList from './components/todoList';
-import InprogressList from './components/inprogressList';
-import DoneList from './components/doneList';
+import Card from './components/card';
 import { bindActionCreators } from 'redux';
 import { getAppDetails, removeItem, updateList } from './actions/actions';
 
@@ -51,13 +49,13 @@ class App extends Component {
         </header>
         <div className='wrapper'>
             <div className='list'>
-                <TodoList types = {['inprogress', 'done']} type={'todo'} removeItem={ this.removeItem } cardList={ todo } updateItem={ this.updateItem } />
+                <Card types = {['inprogress', 'done']} type={'todo'} removeItem={ this.removeItem } cardList={ todo } updateItem={ this.updateItem } />
             </div>
             <div className='list'>
-                <InprogressList types = {['done', 'todo']} type={'inprogress'} removeItem={ this.removeItem } cardList={ inprogress } updateItem={ this.updateItem } />
+                <Card types = {['done', 'todo']} type={'inprogress'} removeItem={ this.removeItem } cardList={ inprogress } updateItem={ this.updateItem } />
             </div>
             <div className='list'>
-                <DoneList types = {['todo', 'inprogress']} type={'done'} removeItem={ this.removeItem } cardList={ done } updateItem={ this.updateItem } />
+                <Card types = {['todo', 'inprogress']} type={'done'} removeItem={ this.removeItem } cardList={ done } updateItem={ this.updateItem } />
             </div>
         </div> 
       </div>
