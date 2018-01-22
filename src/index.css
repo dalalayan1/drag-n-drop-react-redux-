@@ -3,3 +3,58 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.wrapper {
+    display: flex;
+}
+
+label {
+  display: block;
+}
+
+.list-wrapper {
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 2px 20px rgba(0,0,0,.5)
+}
+
+.list {
+  background: #FAFAFA;
+  height: 600px;
+  padding: 20px
+}
+
+.list h2 {
+  text-transform: uppercase;
+}
+
+.list .Droppable {
+  height: 100%;
+}
+
+.list .item {
+  padding: 10px;
+  margin: 10px auto;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0,0,0,.5)
+}
+
+.list .item.todo {
+  background: #F77045; 
+}
+
+.list .item.inprogress {
+  background: #F7E445;  
+}
+
+.list .item.done {
+  background: #47F745; 
+}
+
+.list .item .remove {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}

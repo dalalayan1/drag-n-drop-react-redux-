@@ -48,13 +48,13 @@ class App extends Component {
           <h1 className="App-title">Dummy drag and drop using React/Redux</h1>
         </header>
         <div className='wrapper'>
-            <div className='list'>
+            <div className='list-wrapper'>
                 <Card types = {['inprogress', 'done']} type={'todo'} removeItem={ this.removeItem } cardList={ todo } updateItem={ this.updateItem } />
             </div>
-            <div className='list'>
+            <div className='list-wrapper'>
                 <Card types = {['done', 'todo']} type={'inprogress'} removeItem={ this.removeItem } cardList={ inprogress } updateItem={ this.updateItem } />
             </div>
-            <div className='list'>
+            <div className='list-wrapper'>
                 <Card types = {['todo', 'inprogress']} type={'done'} removeItem={ this.removeItem } cardList={ done } updateItem={ this.updateItem } />
             </div>
         </div> 
